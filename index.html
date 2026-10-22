@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigiHub - Solusi Kebutuhan Digital Sehari-hari</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="light">
+
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="logo">
+                <i class="fa-solid fa-cube"></i>
+                <span>DigiHub</span>
+            </div>
+            <div class="header-actions">
+                <button class="theme-toggle" id="themeToggleBtn">
+                    <i class="fa-solid fa-moon" id="themeIcon"></i>
+                    <span id="themeText">Dark Mode</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>Kebutuhan Digital Sehari-hari dalam Satu Platform</h1>
+            <p>Akses alat-alat produktivitas ringan yang cepat, aman, dan tanpa iklan.</p>
+        </section>
+
+        <!-- Main Workspace Grid -->
+        <div class="tools-grid">
+            
+            <!-- Tool 1: Catatan Cepat -->
+            <div class="tool-card">
+                <div>
+                    <div class="tool-header">
+                        <i class="fa-solid fa-note-sticky"></i>
+                        <h3>Catatan Cepat (Notes)</h3>
+                    </div>
+                    <textarea id="quickNotes" class="notes-area" placeholder="Tulis ide atau catatan cepat di sini... (tersimpan otomatis)"></textarea>
+                </div>
+                <button class="btn btn-secondary" id="clearNotesBtn">
+                    <i class="fa-solid fa-trash"></i> Bersihkan Catatan
+                </button>
+            </div>
+
+            <!-- Tool 2: Penghitung Kata & Karakter -->
+            <div class="tool-card">
+                <div>
+                    <div class="tool-header">
+                        <i class="fa-solid fa-file-lines"></i>
+                        <h3>Penghitung Teks</h3>
+                    </div>
+                    <textarea id="counterText" placeholder="Ketik atau tempel teks Anda di sini..."></textarea>
+                    <div class="counter-stats">
+                        <div class="stat-box">
+                            <span id="wordCount">0</span>
+                            <label>Kata</label>
+                        </div>
+                        <div class="stat-box">
+                            <span id="charCount">0</span>
+                            <label>Karakter</label>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-secondary" id="clearCounterBtn">
+                    <i class="fa-solid fa-rotate-right"></i> Reset
+                </button>
+            </div>
+
+            <!-- Tool 3: Password Generator -->
+            <div class="tool-card">
+                <div>
+                    <div class="tool-header">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <h3>Generator Sandi Aman</h3>
+                    </div>
+                    <div class="pass-output-group">
+                        <input type="text" id="passwordOutput" readonly placeholder="Klik buat sandi">
+                        <button class="btn" style="width: 50px;" id="copyPassBtn" title="Salin Sandi">
+                            <i class="fa-solid fa-copy"></i>
+                        </button>
+                    </div>
+                    <div class="pass-options">
+                        <label><input type="checkbox" id="includeUpper" checked> Huruf Besar (A-Z)</label>
+                        <label><input type="checkbox" id="includeNumbers" checked> Angka (0-9)</label>
+                        <label><input type="checkbox" id="includeSymbols" checked> Simbol (!@#$)</label>
+                    </div>
+                </div>
+                <button class="btn" id="generatePassBtn">
+                    <i class="fa-solid fa-key"></i> Buat Sandi Baru
+                </button>
+            </div>
+
+            <!-- Tool 4: Konverter Teks -->
+            <div class="tool-card">
+                <div>
+                    <div class="tool-header">
+                        <i class="fa-solid fa-font"></i>
+                        <h3>Ubah Format Teks</h3>
+                    </div>
+                    <textarea id="converterText" placeholder="Masukkan teks untuk diubah..."></textarea>
+                    <div class="btn-group" style="margin-bottom: 15px;">
+                        <button class="btn btn-secondary" id="toUpperBtn">UPPERCASE</button>
+                        <button class="btn btn-secondary" id="toLowerBtn">lowercase</button>
+                    </div>
+                </div>
+                <button class="btn btn-secondary" id="capitalizeBtn">Title Case</button>
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2026 DigiHub. Dibuat dengan semangat produktivitas digital.</p>
+        </footer>
+    </div>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
